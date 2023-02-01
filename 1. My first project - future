@@ -1,0 +1,150 @@
+#Подключение модуля
+import time #время
+import os  #ОперационнаяСистема
+import pyttsx3 #озвучка
+
+cls = lambda: os.system('cls') #установка очистки на cls
+cls() #очистка
+engine = pyttsx3.init() # инициализация движка озвучки
+engine.setProperty('rate', 150)     # скорость речи
+engine.setProperty('volume', 0.9)   # громкость (0-1)
+
+engine.say("Это волшебный предсказатель!")  # запись фразы в очередь
+# очистка очереди и воспроизведение текста
+engine.runAndWait()
+
+engine.say("Введите сколько вам лет")
+engine.runAndWait()
+years = int(input()) #Запрос ввода с числом
+engine.say("Введите как вас зовут")
+engine.runAndWait()
+name = input()
+
+time.sleep(1) #задержка 1 секунда
+engine.say("Начинаем просчитывать ваше будущее")
+engine.runAndWait()
+
+time.sleep(1) #задержка 1 секунда
+cls()
+print('__________ 0%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('#_________ 10%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('##________ 20%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('###_______ 30%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('####______ 40%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('#####_____ 50%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('######____ 60%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('#######___ 70%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('########__ 80%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('#########_ 90%')
+time.sleep(1) #задержка 1 секунда
+cls()
+print('########## 100%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('####**#### 100%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('#*##**##*# 100%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('**#****#** 100%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('********** 100%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('********** *00%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('********** **0%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('********** ***%')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('********** ****')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('**********')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('******')
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+print('**')
+
+time.sleep(0.25) #задержка 0.25 секунда
+cls()
+
+engine.say("ПРОСЧЕТ БУДУЩЕГО ОКОНЧЕН")
+engine.runAndWait()
+print('ПРОСЧЕТ БУДУЩЕГО ОКОНЧЕН')
+time.sleep(4) #задержка 4 секунда
+cls()
+
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+cls()
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+print(name,'с возрастом',years,'лет')
+time.sleep(0.05)
+cls()
+print(name,'с возрастом',years,'лет')
+time.sleep(2) #задержка 2 секунда
+cls()
+engine.say("У ТЕБЯ ВСЕ БУДЕТ БАЛДЕЖНО И СУПЕР ХОРОШО!")
+engine.runAndWait()
+print('У ТЕБЯ ВСЕ БУДЕТ БАЛДЕЖНО И СУПЕР ХОРОШО!')
+time.sleep(5) #задержка 5 секунда
+engine.say("УДАЧИ!")
+engine.runAndWait()
+print('УДАЧИ!')
+time.sleep(5) #задержка 5 секунда
