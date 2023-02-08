@@ -1,0 +1,101 @@
+import time
+import os
+import pyttsx3 
+import psutil
+
+
+#___________________Озвучка________________________
+engine = pyttsx3.init() # инициализация движка озвучки
+engine.setProperty('rate', 150)     # скорость речи
+engine.setProperty('volume', 0.9)   # громкость (0-1)
+
+engine.say("Модуль озвучки подключен")
+engine.runAndWait()
+print('Загрузка… █[][][][][][][][][] 10%')
+#__________установка кноманды cls_____________________
+engine.say("Присвоение команд")
+engine.runAndWait()
+cls = lambda: os.system('cls')
+cls()
+
+os.system('color 0A')
+print('Загрузка… ██[][][][][][][][] 20%')
+time.sleep(0.25)
+cpuper = psutil.cpu_percent(3)
+cls()
+print('Загрузка… ███[][][][][][][] 30%')
+ramper = psutil.virtual_memory()[2]
+time.sleep(0.25)
+cls()
+print('Загрузка… ████[][][][][][] 40%')
+time.sleep(0.25)
+cls()
+print('Загрузка… ██████[][][][] 60%')
+time.sleep(0.25)
+cls()
+print('Загрузка… ████████[][] 80%')
+time.sleep(0.25)
+cls()
+print('Загрузка… ██████████ 100%')
+time.sleep(0.25)
+
+engine.say("Команды присвоены")
+engine.runAndWait()
+#_________Проверка ПК__________
+
+engine.say("Начинается проверка состояния компьютера, результаты будут в консоли")
+engine.runAndWait()
+print('Начало проверки ПК')
+print('___________________________')
+
+time.sleep(0.25)
+print('Начало проверки нагрузки CPU')
+time.sleep(0.25)
+if cpuper < 10:
+    print('Нагрузка на процессор низкая')
+    engine.say("Нагрузка на процессор низкая")
+    engine.runAndWait()
+    print(cpuper)
+elif 10 <= cpuper <= 50:
+    print('Нагрузка на процессор в норме')
+    engine.say("Нагрузка на процессор в норме")
+    engine.runAndWait()
+    print(cpuper)
+else:
+    print('Нагрузка на процессор большая')
+    engine.say("Нагрузка на процессор большая")
+    engine.runAndWait()
+    print(cpuper)
+print('___________________________')
+
+time.sleep(0.25)
+print('Начало проверки нагрузки RAM')
+time.sleep(0.25)
+if ramper < 10:
+    print('Нагрузка на память низкая')
+    engine.say("Нагрузка на память низкая")
+    engine.runAndWait()
+    print(ramper)
+elif 10 <= ramper <= 50:
+    print('Нагрузка на память в норме')
+    engine.say("Нагрузка на память в норме")
+    engine.runAndWait()
+    print(ramper)
+else:
+    print('Нагрузка на память большая')
+    engine.say("Нагрузка на память большая")
+    engine.runAndWait()
+    print(ramper)
+
+
+
+
+
+
+
+
+
+#______________КОНЕЦ_______________
+
+os.system('color 08') #0F Для VSC
+time.sleep(25)
